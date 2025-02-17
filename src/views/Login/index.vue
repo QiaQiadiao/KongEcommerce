@@ -3,7 +3,7 @@ import { ref } from 'vue';
 const form = ref({
     account: '',
     password: '',
-    agree: true 
+    agree: false
 })
 const rules = {
     account: [
@@ -24,6 +24,12 @@ const rules = {
             }
         }
     ]
+}
+const formRef = ref(null)
+const doLogin = () => {
+    formRef.value.validate((valid) => {
+        console.log(valid);
+    })
 }
 </script>
 
@@ -49,9 +55,9 @@ const rules = {
         </nav>
         <div class="account-box">
           <div class="form">
-            <el-form :model="form" label-position="right" label-width="60px" :rules="rules"
+            <el-form ref="formRef" :model="form" label-position="right" label-width="60px" :rules="rules"
               status-icon>
-              <el-form-item  label="账户">
+              <el-form-item prop="account" label="账户">
                 <el-input v-model="form.account"/>
               </el-form-item>
               <el-form-item prop="password" label="密码">
@@ -62,7 +68,7 @@ const rules = {
                   我已同意隐私条款和服务条款
                 </el-checkbox>
               </el-form-item>
-              <el-button size="large" class="subBtn">点击登录</el-button>
+              <el-button size="large" class="subBtn" @click="doLogin">点击登录</el-button>
             </el-form>
           </div>
         </div>
