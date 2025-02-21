@@ -21,13 +21,19 @@ export const useCartStone = defineStore('cart', () => {
         const item = cartList.value.find((item) => item.skuId === skuId)
         item.selected = selected
     }
+    const allCheck = (selected) => {
+        cartList.value.forEach((item) => item.selected = selected)
+    }
+    const isAll = computed(() => cartList.value.every((item) => item.selected))
     return {
         cartList,
         addCart,
         delCart,
         allCount,
         allPrice,
-        singleCheck
+        singleCheck,
+        isAll,
+        allCheck
     }
 }, {
     persist: true
