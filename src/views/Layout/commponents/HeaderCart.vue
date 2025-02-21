@@ -30,8 +30,8 @@ const cartStone = useCartStone()
       </div>
       <div class="foot">
         <div class="total">
-          <p>共 {{cartStone.allCount}} 件商品</p>
-          <p>&yen; {{ cartStone.allPrice.toFixed(2) }} </p>
+          <p>共 {{cartStone.selectedCount}} 件商品</p>
+          <p>&yen; {{ cartStone.selectedPrice.toFixed(2) }} </p>
         </div>
         <el-button size="large" type="primary" @click="$router.push('/cartlist')">去购物车结算</el-button>
       </div>
