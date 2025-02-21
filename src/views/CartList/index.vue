@@ -1,6 +1,10 @@
 <script setup>
 import { useCartStone } from '@/stores/cartStore';
 const cartStone = useCartStone()
+const singleCheck = (i,selected)=>{
+    console.log(i,selected);
+    cartStone.singleCheck(i.skuId,selected)
+}
 </script>
 
 <template>
@@ -24,7 +28,7 @@ const cartStone = useCartStone()
           <tbody>
             <tr v-for="i in cartStone.cartList" :key="i.id">
               <td>
-                <el-checkbox />
+                <el-checkbox :model-value="i.selected" @change="(selected)=>singleCheck(i,selected)"/>
               </td>
               <td>
                 <div class="goods">
