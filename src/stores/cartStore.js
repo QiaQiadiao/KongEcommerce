@@ -35,6 +35,9 @@ export const useCartStone = defineStore('cart', () => {
         }
 
     }
+    const clearCart = () => {
+        cartList.value = []
+    }
     const allCount = computed(() => cartList.value.reduce((a, c) => a + c.count, 0))
     const allPrice = computed(() => cartList.value.reduce((a, c) => a + c.count * c.price, 0))
     const singleCheck = (skuId, selected) => {
@@ -58,7 +61,10 @@ export const useCartStone = defineStore('cart', () => {
         isAll,
         allCheck,
         selectedCount,
-        selectedPrice
+        selectedPrice,
+        clearCart,
+        addCart,
+        delCart
     }
 }, {
     persist: true
