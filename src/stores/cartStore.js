@@ -64,7 +64,8 @@ export const useCartStone = defineStore('cart', () => {
         selectedPrice,
         clearCart,
         addCart,
-        delCart
+        delCart,
+        updateNewList
     }
 }, {
     persist: true
