@@ -5,7 +5,7 @@ const cartStone = useCartStone()
 
 <template>
   <div class="cart">
-    <a class="curr" href="javascript:;">
+    <a class="curr" href="javascript:;" style="color: white;">
       <i class="iconfont icon-cart"></i><em>{{ cartStone.cartList.length }}</em>
     </a>
     <div class="layer">
@@ -26,7 +26,7 @@ const cartStone = useCartStone()
           </RouterLink>
           <i class="iconfont icon-close-new" @click="cartStone.delCart(i.skuId)"></i>
         </div>
-       
+
       </div>
       <div class="foot">
         <div class="total">

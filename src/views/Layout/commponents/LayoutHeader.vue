@@ -8,7 +8,7 @@ const categoryStore = useCategoryStore()
   <header class='app-header'>
     <div class="container">
       <h1 class="logo">
-        <RouterLink to="/">小兔鲜</RouterLink>
+        <RouterLink to="/"></RouterLink>
       </h1>
       <ul class="app-header-nav">
         <li class="home">
@@ -31,8 +31,7 @@ const categoryStore = useCategoryStore()
 
 <style scoped lang='scss'>
 .app-header {
-  background: #fff;
-
+  background: #32384b;
   .container {
     display: flex;
     align-items: center;
@@ -56,24 +55,24 @@ const categoryStore = useCategoryStore()
     padding-left: 40px;
     position: relative;
     z-index: 998;
-  
+
     li {
       margin-right: 40px;
       width: 38px;
       text-align: center;
-  
+
       a {
         font-size: 16px;
         line-height: 32px;
         height: 32px;
         display: inline-block;
-  
+        color: #fff;
         &:hover {
           color: $xtxColor;
           border-bottom: 1px solid $xtxColor;
         }
       }
-  
+
       .active {
         color: $xtxColor;
         border-bottom: 1px solid $xtxColor;
@@ -82,13 +81,17 @@ const categoryStore = useCategoryStore()
   }
 
   .search {
+    display: flex;
     width: 170px;
     height: 32px;
     position: relative;
-    border-bottom: 1px solid #e7e7e7;
+    justify-content: center;
+    // border: 1px solid #e7e7e7;
     line-height: 32px;
-
+    color: white;
+    // background-color: #ccc;
     .icon-search {
+      margin-right: 5px;
       font-size: 18px;
       margin-left: 5px;
     }

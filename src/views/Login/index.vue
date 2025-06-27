@@ -4,7 +4,7 @@ import { useUserStore } from '@/stores/userStore';
 import 'element-plus/theme-chalk/el-message.css'
 import {ElMessage} from 'element-plus'
 import { useRouter } from 'vue-router';
-const userStore = useUserStore()  
+const userStore = useUserStore()
 const form = ref({
     account: '',
     password: '',
@@ -50,9 +50,9 @@ const doLogin = () => {
     <header class="login-header">
       <div class="container m-top-20">
         <h1 class="logo">
-          <RouterLink to="/">小兔鲜</RouterLink>
+          <RouterLink to="/"></RouterLink>
         </h1>
-        <RouterLink class="entry" to="/">
+        <RouterLink class="entry" to="/" style="color: white;">
           进入网站首页
           <i class="iconfont icon-angle-right"></i>
           <i class="iconfont icon-angle-right"></i>
@@ -97,7 +97,7 @@ const doLogin = () => {
           <a href="javascript:;">搜索推荐</a>
           <a href="javascript:;">友情链接</a>
         </p>
-        <p>CopyRight &copy; 小兔鲜儿</p>
+        <p>CopyRight &copy; Kongkong</p>
       </div>
     </footer>
   </div>
@@ -105,18 +105,17 @@ const doLogin = () => {
 
 <style scoped lang='scss'>
 .login-header {
-  background: #fff;
-  border-bottom: 1px solid #e4e4e4;
-
+  background: #33394b;
+  // border-bottom: 1px solid #e4e4e4;
   .container {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
+    color: white;
   }
 
   .logo {
     width: 200px;
-
     a {
       display: block;
       height: 132px;
@@ -149,7 +148,7 @@ const doLogin = () => {
 }
 
 .login-section {
-  background: url('@/assets/images/login-bg.png') no-repeat center / cover;
+  background: url('@/assets/images/login-bg.png') repeat center ;
   height: 488px;
   position: relative;
 

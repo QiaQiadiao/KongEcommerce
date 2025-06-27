@@ -32,8 +32,8 @@ const {y} = useScroll(window)
   left: 0;
   top: 0;
   z-index: 999;
-  background-color: #fff;
-  border-bottom: 1px solid #e4e4e4;
+  background-color: #313749;
+  // border-bottom: 1px solid #e4e4e4;
   // 此处为关键样式!!!
   // 状态一：往上平移自身高度 + 完全透明
   transform: translateY(-100%);
@@ -64,13 +64,12 @@ const {y} = useScroll(window)
     text-align: center;
     padding-left: 40px;
     border-left: 2px solid $xtxColor;
-
     a {
       width: 38px;
       margin-right: 40px;
       font-size: 16px;
       line-height: 1;
-
+      color: white;
       &:hover {
         color: $xtxColor;
       }
@@ -95,7 +94,7 @@ const {y} = useScroll(window)
       line-height: 32px;
       height: 32px;
       display: inline-block;
-
+      color: white;
       &:hover {
         color: $xtxColor;
         border-bottom: 1px solid $xtxColor;
